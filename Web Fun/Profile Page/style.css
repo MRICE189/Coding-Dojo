@@ -1,3 +1,5 @@
+/* Reset and Main Container */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +17,8 @@ a {
     align-items: top;
 }
 
+/* Top NavBar */
+ 
 #topnav {
     background-color: black;
     color: white;
@@ -43,11 +47,19 @@ a {
     margin-left: 10%;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+/* Main Body Section */
+
 #body {
     background-color: wheat;
     display: flex;
     width: 100%;
 }
+
+/* Left Side */
 
 #info {
     width: 35%;
@@ -70,7 +82,6 @@ a {
 
 .info_body {
     width: calc(100% - 20px);
-    /* height: 200px; */
     background-color: white;
     padding: 10px;
 }
@@ -91,76 +102,6 @@ a {
     width: calc(100% - 10px);
     background-color: white;
     padding: 10px 0px 10px 10px;
-}
-
-#connections {
-    width: 25%;
-    position: absolute;
-    left: 60%;
-    top: 100px;
-}
-
-#conn_req {
-    width: 100%;
-    border: 5px solid gray;
-    margin-bottom: 15px;
-}
-
-.req_top {
-    width: 100%;
-    background-color: darkslategray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.req_body {
-    width: calc(100% - 20px);
-    background-color: white;
-    padding: 10px;
-}
-
-#conn_list {
-    width: 100%;
-    border: 5px solid gray;
-}
-
-.conn_top {
-    width: 100%;
-    background-color: darkslategray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.conn_body {
-    width: calc(100% - 20px);
-    background-color: white;
-    padding: 10px;
-}
-
-.conn_body div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-.conn_body img {
-    margin-right: 20px;
-}
-
-.conn_more {
-    width: calc(100% - 10x);
-    background-color: white;
-    border-top: 5px solid gray;
-    color: blue;
-    text-decoration: underline;
-    padding: 15px;
-}
-
-.bold {
-    font-weight: bold;
 }
 
 .info_body h1 {
@@ -210,6 +151,74 @@ p.gray {
     padding-bottom: 10px;
 }
 
+/* Right Side */
+
+#connections {
+    width: 25%;
+    position: absolute;
+    left: 60%;
+    top: 100px;
+}
+
+#conn_req {
+    width: 100%;
+    border: 5px solid gray;
+    margin-bottom: 15px;
+}
+
+.req_top {
+    width: 100%;
+    background-color: darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.req_body {
+    width: calc(100% - 20px);
+    background-color: white;
+    padding: 10px 10px 0px 10px;
+}
+
+#conn_list {
+    width: 100%;
+    border: 5px solid gray;
+}
+
+.conn_top {
+    width: 100%;
+    background-color: darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conn_body {
+    width: calc(100% - 20px);
+    background-color: white;
+    padding: 10px;
+}
+
+.conn_body div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.conn_body img {
+    margin-right: 20px;
+}
+
+.conn_more {
+    width: calc(100% - 10x);
+    background-color: white;
+    border-top: 5px solid gray;
+    color: blue;
+    text-decoration: underline;
+    padding: 15px;
+}
+
 #connections h2 {
     font-size: 1.0em;
     padding: 10px;
@@ -226,25 +235,15 @@ p.gray {
     width: 25px;
 }
 
-#todd {
+.name_pic {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-#todd > img {
+.req_body img {
     margin-right: 20px;
     margin-bottom: 10px;
-}
-
-#phil {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-#phil > img {
-    margin-right: 20px;
 }
 
 .button_500 {
@@ -256,6 +255,8 @@ p.gray {
     height: 25px;
     width: 40px;
 }
+
+/* Absolute Placement Items */
 
 .buttons_todd {
     position: absolute;
