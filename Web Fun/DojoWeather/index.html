@@ -11,9 +11,9 @@
     <div id="navbar">
         <h1>DojoWeather</h1>
         <ul>
-            <li><h2 onclick="setCity(this);">Chicago</h2></li>
-            <li><h2 onclick="setCity(this);">Los Angeles</h2></li>
-            <li><h2 onclick="setCity(this);">Houston</h2></li>
+            <li><h2 onclick="cityAlert(this);setCity(this);">Chicago</h2></li>
+            <li><h2 onclick="cityAlert(this);setCity(this);">Los Angeles</h2></li>
+            <li><h2 onclick="cityAlert(this);setCity(this);">Houston</h2></li>
         </ul>
     </div>
     <div id="page_body">
@@ -21,7 +21,7 @@
             <h1>Chicago</h1>
             <div>
                 <p>show temperature in: </p>
-                <select id="measurement" onchange="convertTemps();">
+                <select id="measurement" onchange="wantConvert();">
                     <option value="F">°F</option>
                     <option value="C">°C</option>
                 </select>
