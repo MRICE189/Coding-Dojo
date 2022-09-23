@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.row {
+    line-height: 0;
+}
+
+div.row div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+div.brick {
+    background-color: blue;
+}
+
+div.coin {
+    background: url('./imgs/coin.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+div.cherry {
+    background: url('./imgs/cherries.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+div#pacman {
+    background: url('./imgs/pacman.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 160px;
+    left: 20px;
+}
+div#bluey {
+    background: url('./imgs/bluey.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    /* top: 40px;
+    left: 360px; */
+}
+div#pinky {
+    background: url('./imgs/pinky.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    /* top: 60px;
+    left: 360px; */
+}
+
+div#score {
+    border: 4px solid white;
+    width: 200px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
