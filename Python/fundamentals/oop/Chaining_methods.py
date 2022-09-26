@@ -17,15 +17,15 @@ class User:
             print("Gold card points: " + str(self.gold_card_points))
         else:
             print("Rewards member: No")
+        return self
 
     def enroll(self):
         if self.is_rewards_member == True:
             print("User is already a member")
-            return False
         else:
             self.is_rewards_member = True
             self.gold_card_points = 200
-            return True
+        return self
 
     def spend_points(self, amount):
         if self.gold_card_points >= amount:
@@ -33,6 +33,7 @@ class User:
             print("Spent " + str(amount) + " points.  New balance: " + str(self.gold_card_points))
         else:
             print("Not enough points")
+        return self
 
 
 user_matt = User("Matt", "Rice", "email@codingdojo.com", 33)
