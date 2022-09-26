@@ -33,16 +33,15 @@ students = [
 
 def iterateDictionary(students):
     for key in students:
-        print('first_name - {}, last_name - {}'.format(key['first_name'], key['last_name']))
+        print(f"first_name - {key['first_name']}, last_name - {key['last_name']}")
 iterateDictionary(students)
 
 #3 Get Values from a list of dictionaries
 
 def iterateDictionary2(key_name, some_list):
-    for i in some_list:
-        for key in i.keys():
-            if (key == key_name):
-                print(i[key])
+    for dict in some_list:
+        if key_name in dict:
+            print(dict[key_name])
 iterateDictionary2('first_name', students)
 iterateDictionary2('last_name', students)
 
