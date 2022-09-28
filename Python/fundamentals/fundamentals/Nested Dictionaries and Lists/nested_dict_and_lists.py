@@ -43,8 +43,8 @@ iterateDictionary(students)
 
 def iterateDictionary2(key_name, some_list):
     for dict in some_list:
-        if key_name in dict:
-            print(dict[key_name])
+        # if key_name in dict:
+        print(dict[key_name])
 iterateDictionary2('first_name', students)
 iterateDictionary2('last_name', students)
 
