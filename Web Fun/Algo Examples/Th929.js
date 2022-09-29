@@ -33,9 +33,9 @@ const expected4 = false;
 function isPalindrome(str) {
     if (str === "") {
         return false;
-    }   
-    for (var i=0; i<str.length/2; i++) {
-        if (str[i] != str[str.length-(i+1)]) {
+    }
+    for (var i = 0; i < str.length / 2; i++) {
+        if (str[i] != str[str.length - (i + 1)]) {
             return false;
         }
     }
@@ -87,9 +87,9 @@ const two_expected5 = "567765";
  */
 function longestPalindromicSubstring(str) {
     var longestStr = "";
-    for (var i=0; i<str.length; i++) {
+    for (var i = 0; i < str.length; i++) {
         var temp = "";
-        for (var j=i; j<str.length; j++) {
+        for (var j = i; j < str.length; j++) {
             temp += str[j];
             if (isPalindrome(temp)) {
                 if (temp.length > longestStr.length) {
@@ -102,3 +102,20 @@ function longestPalindromicSubstring(str) {
 }
 
 console.log(longestPalindromicSubstring(two_str3))
+
+function longestPalindromicSubstring2(str) {
+
+    let currentLongest = str[0]
+
+    for (let i = 0; i < str.length; i++) {
+        for (let j = i + 1; j < str.length; j++) {
+            let subStr = str.substring(i, j)
+            if (isPalindrome(subStr) && subStr.length > currentLongest.length) {
+                currentLongest = str.substring(i, j)
+            }
+        }
+    }
+
+    return currentLongest
+}
+
