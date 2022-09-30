@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            background-color: gainsboro;
+            text-align: center;
+        }
+        .add {
+            background-color: darkgreen;
+            height: 50px;
+            width: 200px;
+            border: 3px solid black;
+            border-radius: 5%;
+            margin-bottom: 15px;
+        }
+        .reset {
+            background-color: darkgreen;
+            height: 50px;
+            width: 200px;
+            border: 3px solid black;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+    <br>
+    <h2>Count = {{session['count']}} times!</h2> 
+    <h2>Visits = {{session['visits']}} times!</h2>
+    <form action="/count" method="post">
+        <button class="add">Add to Count!</button>
+    </form>
+    <form action="/count2" method="post">
+        <button class="add">Add 2 to Count!</button>
+    </form>
+    <form action="/countX" method="post">
+        <label for="count_increase">Add X to Count!</label>
+        <input type="number" id="count_increase" name="count_increase">
+        <button class="add">!</button>
+    </form>
+    <form action="/reset" method="post">
+        <button class="reset">Reset Count :(</button>
+    </form>
+</body>
+</html>
