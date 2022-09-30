@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+#survey {
+    width: 30%;
+    background-color: rgb(33, 44, 44);
+    color: white;
+    margin: 20px auto 0px auto;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#results {
+    width: 30%;
+    background-color: rgb(33, 44, 44);
+    color: white;
+    margin: 20px auto 0px auto;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#results h1 {
+    margin: 30px auto 20px 15px;
+}
+
+#results p {
+    margin: 0px auto 15px 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 15px;
+}
+
+form * {
+    margin-bottom: 15px;
+}
+
+body h1 {
+    color: goldenrod;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background-color: goldenrod;
+    border: 3px solid black;
+    box-shadow: 5px 5px black;
+    border-radius: 10% / 20%;
+}
