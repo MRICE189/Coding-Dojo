@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+body {
+    width: 80%;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.box {
+    margin-top: 50px;
+    width: 70%;
+    height: 300px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrong {
+    background-color: red;
+    color: white;
+}
+
+.right {
+    background-color: green;
+    color: white;
+}
+
+form {
+    margin-top: 50px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 5%;
+}
+
