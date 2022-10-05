@@ -1,0 +1,33 @@
+INSERT INTO dojos (name) VALUES ('Coding Dojo'), ('Programming Dojo'), ('Typing Dojo');
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM dojos;
+
+INSERT INTO dojos (name) VALUES ('Coding Dojo'), ('Programming Dojo'), ('Typing Dojo');
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES 
+('Matt', 'R', 33, 4),
+('Rob', 'G', 37, 4),
+('Joe', 'R', 32, 4);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES 
+('Jan', 'K', 31, 5),
+('Rob', 'P', 26, 5),
+('Tim', 'A', 40, 5);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES 
+('Mike', 'C', 30, 6),
+('Phyllis', 'T', 21, 6),
+('John', 'S', 47, 6);
+
+SELECT * FROM ninjas
+JOIN dojos ON ninjas.dojo_id = dojos.id
+WHERE dojos.id = 4;
+
+SELECT * FROM ninjas
+JOIN dojos ON ninjas.dojo_id = dojos.id
+WHERE ninjas.dojo_id = (SELECT MAX(dojo_id) from ninjas);
+
+SELECT dojos.name AS last_ninja_dojo FROM dojos
+JOIN ninjas ON ninjas.dojo_id = dojos.id
+WHERE ninjas.id = (SELECT MAX(ninjas.id) from ninjas);

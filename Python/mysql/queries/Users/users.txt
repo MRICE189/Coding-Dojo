@@ -1,0 +1,22 @@
+INSERT INTO names(name, email)
+VALUES ('Matt', 'matt@email.com'), ('Rob',  'rob@email.com'), ('Joe', 'joe@email.com');
+
+SELECT * FROM names;
+
+SELECT name FROM names
+WHERE email = 'matt@email.com';
+
+-- SELECT name FROM names
+-- WHERE id = (SELECT MAX(ID) FROM names);
+SELECT name FROM names
+ORDER BY id DESC LIMIT 0,1;
+
+UPDATE names SET
+name = 'Pancakes'
+WHERE id= 13;
+
+DELETE FROM names
+WHERE id = 14;
+
+SELECT * FROM names
+ORDER BY name DESC;

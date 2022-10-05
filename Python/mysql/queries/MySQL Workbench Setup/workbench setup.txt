@@ -1,0 +1,12 @@
+SELECT name FROM names;
+
+INSERT INTO names(name)
+VALUES ('Matt');
+
+INSERT INTO names(name)
+VALUES ('Rob'), ('Joe');
+
+DELETE FROM names
+WHERE ID BETWEEN 1 AND 9;
+
+select * from names;
