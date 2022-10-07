@@ -22,7 +22,7 @@ class User:
             return []
         users = []
         for dict in users_from_db:
-            users.append(cls(dict))
+            users.append(dict)
         return users
 
     @classmethod
