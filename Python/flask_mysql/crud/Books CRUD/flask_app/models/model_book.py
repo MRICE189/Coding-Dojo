@@ -50,4 +50,15 @@ class Book:
             book.favorited_authors.append(model_author.Author(favorited_author_data))
         return book
 
-
+    @classmethod
+    def get_available(cls, data):
+        query = 'select * from books join favorites on books.id = favorites.book_id join authors on favorites.author_id = authors.id where books.id not in (select favorites.book_id as book from favorites where author_id = %(id)s) group by books.title;'
+        results = connectToMySQL(DATABASE).query_db(query, data)
+        print(results)
+        if not results:
+            return []
+        available_books = []
+        for dict in results:
+            book_instance = cls(dict)
+            available_books.append(book_instance)
+        return available_books

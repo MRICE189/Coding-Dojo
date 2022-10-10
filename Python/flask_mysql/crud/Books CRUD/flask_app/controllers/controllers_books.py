@@ -19,7 +19,8 @@ def create_book():
 def display_book(id):
     book = Book.get_one_book({'id': id})
     authors = Author.get_all_authors()
-    return render_template('book.html', book=book, authors=authors)
+    available_authors = Author.get_available({'id': id})
+    return render_template('book.html', book=book, authors=authors, available_authors=available_authors)
 
 @app.route('/books/favorite', methods=['POST'])
 def favorite_author():

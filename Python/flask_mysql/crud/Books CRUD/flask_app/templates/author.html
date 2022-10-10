@@ -39,7 +39,7 @@
                     <input type="hidden" name="id" value="{{author.id}}">
                     <div class="mb-1">
                         <select name="book_id" id="favorite">
-                            {% for book in books %}
+                            {% for book in available_books %}
                                 <option name="book_id" value="{{book.id}}">{{book.title}}</option>
                             {% endfor %}
                         </select>
