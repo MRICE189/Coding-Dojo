@@ -18,6 +18,9 @@
             </div>
         </div>
         <div class="col-6">
+            {% for message in get_flashed_messages(category_filter=['err_recipe']) %}
+            <p class="text-danger">{{message}}</p>
+            {% endfor %}
             <form action="/recipes/update/{{recipe.id}}" method="post">
                 <div class="d-flex justify-content-between mb-3">
                     <label for="name">Name:</label>
@@ -38,10 +41,17 @@
                 <div class="d-flex gap-3 justify-content-between mb-3">
                     <label for="under_30">Cook time under 30?</label>
                     <div>
+                        {% if recipe.under_30 == 'Yes'  %}
                         <input type="radio" name="under_30" id="Yes" value="Yes" checked="checked">
                         <label for="Yes">Yes</label>
                         <input type="radio" name="under_30" id="No" value="No">
                         <label for="No">No</label>
+                        {% else %}
+                        <input type="radio" name="under_30" id="Yes" value="Yes">
+                        <label for="Yes">Yes</label>
+                        <input type="radio" name="under_30" id="No" value="No" checked="checked">
+                        <label for="No">No</label>
+                        {% endif %}
                     </div>
                 </div>
                 <input type="hidden" name="user_id" value="{{session['uuid']}}">

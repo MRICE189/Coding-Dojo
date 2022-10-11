@@ -30,9 +30,9 @@
                 <tr>
                     <td>{{recipe.name}}</td>
                     <td>{{recipe.under_30}}</td>
-                    <td>{{recipe.user}}</td>
-                    <td class="d-flex justify-content-center">
-                        {% if recipe.user_id == session['uuid'] %}
+                    <td>{{recipe.user.first_name}}</td>
+                    <td class="d-flex justify-content-start">
+                        {% if recipe.user.id == session['uuid'] %}
                         <p><a href="/recipes/{{recipe.id}}">View recipe</a> | <a href="/recipes/edit/{{recipe.id}}">edit</a> | <a href="/recipes/delete/{{recipe.id}}">delete</a></p>
                         {% else: %}
                         <p><a href="/recipes/{{recipe.id}}">View recipe</a></p>

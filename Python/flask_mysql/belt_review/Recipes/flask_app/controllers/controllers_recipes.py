@@ -46,6 +46,8 @@ def edit_recipe(id):
     if not 'uuid' in session:
         return redirect('/')
     recipe = Recipe.get_one_recipe({'id': id})
+    if session['uuid'] != recipe.creator.id:
+        return redirect('/recipes')
     return render_template('edit_recipe.html', recipe=recipe)
 
 @app.route('/recipes/update/<int:id>', methods=['POST'])
@@ -53,7 +55,7 @@ def update_recipe(id):
     if not 'uuid' in session:
         return redirect('/')
     if not Recipe.validate_recipe(request.form):
-        return redirect(f'/recipes/{id}')
+        return redirect(f'/recipes/edit/{id}')
     data = {
         **request.form,
         'id': id
@@ -64,6 +66,10 @@ def update_recipe(id):
 @app.route('/recipes/delete/<int:id>')
 def delete_recipe(id):
     if not 'uuid' in session:
+        return redirect('/')
+    recipe = Recipe.get_one_recipe({'id': id})
+    if session['uuid'] != recipe.creator.id:
+        del session['uuid']
         return redirect('/')
     recipe_id = Recipe.delete_recipe({'id': id})
     return redirect('/recipes')

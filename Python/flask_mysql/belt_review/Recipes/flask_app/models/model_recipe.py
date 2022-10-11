@@ -36,19 +36,15 @@ class Recipe:
             return []
         recipes = []
         for dict in recipes_from_db:
-            recipe = {
-                'id': dict['id'],
-                'name': dict['name'],
-                'description': dict['description'],
-                'instructions': dict['instructions'],
-                'date_made': dict['date_made'],
-                'under_30': dict['under_30'],
-                'created_at': dict['created_at'],
-                'updated_at': dict['updated_at'],
-                'user_id': dict['user_id'],
-                'user': dict['first_name']
+            recipe_actual = cls(dict)
+            user_info = {
+                **dict,
+                'id': dict['users.id'],
+                'created_at': dict['users.created_at'],
+                'updated_at': dict['users.updated_at'],
             }
-            recipes.append(recipe)
+            recipe_actual.user = model_user.User(user_info)
+            recipes.append(recipe_actual)
         print(recipes)
         return recipes
 
