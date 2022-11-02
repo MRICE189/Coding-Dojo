@@ -16,19 +16,6 @@ const Planet = (props) => {
         })()
     }, [planetID]);
 
-
-    // useEffect(() => {
-    //     if (isNaN(+planetID)) {
-    //         axios.get(`${planetID}`)
-    //         .then(res => {setPlanet(res.data)})
-    //         .catch(err => navigate("/error"))
-    //     } else {
-    //         axios.get(`https://swapi.dev/api/planets/${planetID}`)
-    //         .then(res => {setPlanet(res.data)})
-    //         .catch(err => navigate("/error"))
-    //     }
-    // }, [planetID]);
-
     return (
         <div>
             <h1>{planet.name}</h1>
