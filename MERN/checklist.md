@@ -59,7 +59,7 @@ module.exports.Person = mongoose.model('Person', PersonSchema);
 ```
 - in controllers folder, create a modelName.controllers.js
 ```js
-const ModelName = require('../models/modelName.model');
+const {ModelName} = require('../models/modelName.model');
 
 module.exports.findAllModelName = (req, res) => {
     ModelName.find()
@@ -101,10 +101,10 @@ const UserController = require('../controllers/user.controller');
 
 module.exports = app => {
     app.get('/api/users', UserController.findAllUsers);
-    app.get('/api/users/:id', UserController.findOneSingleUser);
-    app.put('/api/users/:id', UserController.updateExistingUser);
-    app.post('/api/users', UserController.createNewUser);
-    app.delete('/api/users/:id', UserController.deleteAnExistingUser);
+    app.get('/api/users/:id', UserController.findOneUser);
+    app.put('/api/users/:id', UserController.updateUser);
+    app.post('/api/users', UserController.createUser);
+    app.delete('/api/users/:id', UserController.deleteUser);
 }
 ```
 
@@ -113,10 +113,10 @@ module.exports = app => {
 const express = require("express");
 const cors = require("cors")
 const app = express();
-require("./server/config/mongoose.config");
+require("../server/config/mongoose.config");
 app.use(cors());
 app.use(express.json(), express.urlencoded({ extended: true }));
-const AllMyUserRoutes = require("./server/routes/MODEL_NAME.routes");
+const AllMyUserRoutes = require("../server/routes/MODEL_NAME.routes");
 AllMyUserRoutes(app);
 app.listen(8000, () => console.log("The server is all fired up on port 8000"));
 ```
@@ -158,37 +158,51 @@ root.render(
 import React, { useState } from 'react'
 import axios from 'axios';
 
-const ComponentName = () => {
-    const [firstName, setFirstName] = useState(""); 
-    const [lastName, setLastName] = useState("");
+const Form = () => {
+    const initialState = {
+        title: "",
+        price: "",
+        description: ""
+    }
+    const [product, setProduct] = useState(initialState); 
+
+    const handleChange = (e) => {
+        setProduct(product => ({
+            ...product,
+            [e.target.name]: e.target.value
+        }))
+    }
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/people', {
-            firstName,
-            lastName
-        })
+        axios.post('http://localhost:8000/api/products', product)
             .then(res=>console.log(res))
             .catch(err=>console.log(err))
+        setProduct(initialState)
     }
 
     return (
         <form onSubmit={onSubmitHandler}>
             <p>
-                <label>First Name</label><br/>
-                <input type="text" onChange={(e)=>setFirstName(e.target.value)} value={firstName}/>
+                <label>Title:</label><br/>
+                <input type="text" name="title" onChange={handleChange} value={product.title}/>
             </p>
             <p>
-                <label>Last Name</label><br/>
-                <input type="text" onChange={(e)=>setLastName(e.target.value)} value={lastName}/>
+                <label>Price</label><br/>
+                <input type="number" name="price" onChange={handleChange} value={product.price}/>
+            </p>
+            <p>
+                <label>Description</label><br/>
+                <input type="text" name="description" onChange={handleChange} value={product.description}/>
             </p>
             <input type="submit"/>
         </form>
     )
 }
+export default Form;
 ```
 
-- create Main.js in views folder
+- create Main.jsx in views folder
 
 ```js
 import React, {useState, useEffect} from 'react';
@@ -201,6 +215,7 @@ const Main = () => {
         </div>
     )
 }
+export default Main;
 ```
 
 - setup app.js Routes to display views
@@ -212,7 +227,6 @@ import Main from './views/Main';
 function App() {
   return (
     <div className="App">
-      <SearchBar />
       <Routes>
         <Route path="/" element={<Main />} />
       </Routes>
