@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {Link, useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import DeleteButton from './DeleteButton';
 
 const Products = (props) => {
     const [products, setProducts] = useState([]);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     useEffect(() => {
         (async () => {
@@ -13,14 +14,8 @@ const Products = (props) => {
         })()
     }, [products]);
 
-    const handleDelete = (delIdx, productID) => {
-        const filteredProducts = products.filter((product, idx) => {
-            return idx !== delIdx
-        });
-        (async () => {
-            const deletedProduct = await axios.delete(`http://localhost:8000/api/products/${productID}`).catch(err => console.log('error deleting product'));
-        })();
-        setProducts(filteredProducts);
+    const removeFromDom = (productID) => {
+        setProducts(products.filter(product => product._id != productID))
     }
 
     return (
@@ -29,7 +24,7 @@ const Products = (props) => {
                 return (
                     <div key={idx}>
                         <p><Link to={`/${product._id}`}>{product.title}</Link></p>
-                        <button onClick={(e) => {handleDelete(idx, product._id);}}>Delete</button>
+                        <DeleteButton productID={product._id} successCallback={()=> removeFromDom(product._id)} />
                     </div>
                 )
             })}

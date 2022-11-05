@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
-import axios from 'axios';
 
-const Form = () => {
-    const initialState = {
-        title: "",
-        price: "",
-        description: ""
-    }
+const Form = (props) => {
+    const {initialState, onSubmitProp} = props;
     const [product, setProduct] = useState(initialState); 
 
     const handleChange = (e) => {
@@ -18,10 +13,7 @@ const Form = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/products', product)
-            .then(res=>console.log(res))
-            .catch(err=>console.log(err))
-        setProduct(initialState)
+        onSubmitProp(product);
     }
 
     return (
