@@ -133,7 +133,7 @@ nodemon server.js
 ```
 npx create-react-app client
 cd client
-npm install axios react-router-dom
+npm install axios react-router-dom react-bootstrap bootstrap
 ```
 
 - in index.js
