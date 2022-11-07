@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import Players from '../components/Players';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 
 const Status = () => {
     const [players, setPlayers] = useState([]);
     const [loaded, setLoaded] = useState(false);
+    const [reload, setReload] = useState(false);
     const {number} = useParams();
     let game = `game${number}`
 
@@ -15,11 +15,11 @@ const Status = () => {
             setPlayers(data.data.player);
             setLoaded(true);
         })()
-    }, [loaded]);
+    }, [reload]);
 
     const handleClick = (player, game, status) => {
             axios.put(`http://localhost:8000/api/players/${player}`, {[game]: status})
-            .then(setLoaded(false))
+            .then(setReload(!reload))
             .catch(err => console.log('error on click'))
     }
 
@@ -38,33 +38,33 @@ const Status = () => {
                 </thead>
                 <tbody>
                     {loaded && players.map((player, idx) => {
-                    if (game == "game1") {
+                    if (game === "game1") {
                         return (
                             <tr key={idx}>
                                 <td>{player.name}</td>
-                                    {player.game1 == "playing" ? <td className='btn btn-success'>Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "playing")} className='btn border btn-light'>Playing</button></td>}
-                                    {player.game1 == "notPlaying" ? <td className='btn btn-danger'>Not Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "notPlaying")} className='btn border btn-light'>Not Playing</button></td>}
-                                    {player.game1 == "undecided" ? <td className='btn btn-warning'>Undecided</td> : <td><button onClick={(e) => handleClick(player._id, game, "undecided")} className='btn border btn-light'>Undecided</button></td>}
+                                    {player.game1 === "playing" ? <td className='btn btn-success'>Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "playing")} className='btn border btn-light'>Playing</button></td>}
+                                    {player.game1 === "notPlaying" ? <td className='btn btn-danger'>Not Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "notPlaying")} className='btn border btn-light'>Not Playing</button></td>}
+                                    {player.game1 === "undecided" ? <td className='btn btn-warning'>Undecided</td> : <td><button onClick={(e) => handleClick(player._id, game, "undecided")} className='btn border btn-light'>Undecided</button></td>}
                             </tr>
                         )
                     }
-                    if (game == "game2") {
+                    if (game === "game2") {
                         return (
                             <tr key={idx}>
                                 <td>{player.name}</td>
-                                    {player.game2 == "playing" ? <td className='btn btn-success'>Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "playing")} className='btn border btn-light'>Playing</button></td>}
-                                    {player.game2 == "notPlaying" ? <td className='btn btn-danger'>Not Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "notPlaying")} className='btn border btn-light'>Not Playing</button></td>}
-                                    {player.game2 == "undecided" ? <td className='btn btn-warning'>Undecided</td> : <td><button onClick={(e) => handleClick(player._id, game, "undecided")} className='btn border btn-light'>Undecided</button></td>}
+                                    {player.game2 === "playing" ? <td className='btn btn-success'>Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "playing")} className='btn border btn-light'>Playing</button></td>}
+                                    {player.game2 === "notPlaying" ? <td className='btn btn-danger'>Not Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "notPlaying")} className='btn border btn-light'>Not Playing</button></td>}
+                                    {player.game2 === "undecided" ? <td className='btn btn-warning'>Undecided</td> : <td><button onClick={(e) => handleClick(player._id, game, "undecided")} className='btn border btn-light'>Undecided</button></td>}
                             </tr>
                         )
                     }
-                    if (game == "game3") {
+                    if (game === "game3") {
                         return (
                             <tr key={idx}>
                                 <td>{player.name}</td>
-                                    {player.game3 == "playing" ? <td className='btn btn-success'>Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "playing")} className='btn border btn-light'>Playing</button></td>}
-                                    {player.game3 == "notPlaying" ? <td className='btn btn-danger'>Not Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "notPlaying")} className='btn border btn-light'>Not Playing</button></td>}
-                                    {player.game3 == "undecided" ? <td className='btn btn-warning'>Undecided</td> : <td><button onClick={(e) => handleClick(player._id, game, "undecided")} className='btn border btn-light'>Undecided</button></td>}
+                                    {player.game3 === "playing" ? <td className='btn btn-success'>Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "playing")} className='btn border btn-light'>Playing</button></td>}
+                                    {player.game3 === "notPlaying" ? <td className='btn btn-danger'>Not Playing</td> : <td><button onClick={(e) => handleClick(player._id, game, "notPlaying")} className='btn border btn-light'>Not Playing</button></td>}
+                                    {player.game3 === "undecided" ? <td className='btn btn-warning'>Undecided</td> : <td><button onClick={(e) => handleClick(player._id, game, "undecided")} className='btn border btn-light'>Undecided</button></td>}
                             </tr>
                         )
                     }

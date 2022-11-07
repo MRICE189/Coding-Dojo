@@ -1,15 +1,15 @@
 import React from 'react'
 import axios from 'axios';
     
-export default (props) => {
+const DeleteButton = (props) => {
     
     const { playerID, playerName, successCallback } = props;
     
     const deletePlayer = (e) => {
-        if (window.confirm(`Are you sure you want to delete ${playerName}?`) == true) {
+        if (window.confirm(`Are you sure you want to delete ${playerName}?`) === true) {
             axios.delete(`http://localhost:8000/api/players/${playerID}`)
             .then(res=>{
-                successCallback();
+                successCallback(playerID);
             })
         }
     }
@@ -21,3 +21,4 @@ export default (props) => {
     )
 }
 
+export default DeleteButton;

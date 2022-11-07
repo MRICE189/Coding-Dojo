@@ -9,7 +9,7 @@ const PlayerSchema = new mongoose.Schema({
     position: { type: String },
     game1: {type: String},
     game2: {type: String},
-    game3: {type: String}
+    game3: {type: String},
 }, { timestamps: true });
 
 module.exports.Player = mongoose.model('Player', PlayerSchema);

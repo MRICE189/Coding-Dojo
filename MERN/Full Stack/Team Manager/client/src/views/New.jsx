@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Form from '../components/Form';
-import NavBar from '../components/NavBar';
 
 
 const New = () => {
