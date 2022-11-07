@@ -59,37 +59,37 @@ module.exports.Person = mongoose.model('Person', PersonSchema);
 ```
 - in controllers folder, create a modelName.controllers.js
 ```js
-const {ModelName} = require('../models/modelName.model');
+const {Player} = require('../models/player.model');
 
-module.exports.findAllModelName = (req, res) => {
-    ModelName.find()
-    .then(allModelName => res.json({modelName: allModelName}))
+module.exports.findAllPlayers = (req, res) => {
+    Player.find()
+    .then(allPlayers => res.json({player: allPlayers}))
     .catch(err => res.json({message: 'something went wrong', error: err}));
 }
 
-module.exports.findOneModelName = (req, res) => {
-    ModelName.findOne({_id: req.params.id})
-    .then(oneModelName => res.json({modelName: oneModelName}))
+module.exports.findOnePlayer = (req, res) => {
+    Player.findOne({_id: req.params.id})
+    .then(onePlayer => res.json({player: onePlayer}))
     .catch(err => res.json({message: 'something went wrong', error: err}));
 }
 
-module.exports.createModelName = (req, res) => {
-    ModelName.create(req.body)
-    .then(newModelName => res.json({modelName: newModelName}))
-    .catch(err => res.json({message: 'something went wrong', error: err}));
+module.exports.createPlayer = (req, res) => {
+    Player.create(req.body)
+    .then(newPlayer => res.json({player: newPlayer}))
+    .catch(err => res.status(400).json(err));
 }
 
-module.exports.updateModelName = (req, res) => {
-    ModelName.findOneAndUpdate(
+module.exports.updatePlayer = (req, res) => {
+    Player.findOneAndUpdate(
         {_id: req.params.id},
         req.body,
         {new: true, runValidators: true})
-        .then(updatedModelName => res.json({modelName: updatedModelName}))
-        .catch(err => res.json({message: 'something went wrong', error: err}));
-}
+        .then(updatedPlayer => res.json({player: updatedPlayer}))
+        .catch(err => res.status(400).json(err));
+    }
 
-module.exports.deleteModelName = (req, res) => {
-    ModelName.deleteOne({_id: req.params.id})
+module.exports.deletePlayer = (req, res) => {
+    Player.deleteOne({_id: req.params.id})
     .then(result => res.json({result: result}))
     .catch(err => res.json({message: 'something went wrong', error: err}));
 }
@@ -97,7 +97,7 @@ module.exports.deleteModelName = (req, res) => {
 
 - in routes folder, create a modelName.routes.js
 ```js
-const UserController = require('../controllers/user.controller');
+const UserController = require('../controllers/user.controllers');
 
 module.exports = app => {
     app.get('/api/users', UserController.findAllUsers);
