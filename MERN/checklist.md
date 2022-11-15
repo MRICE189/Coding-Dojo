@@ -223,6 +223,8 @@ export default Main;
 import './App.css';
 import {Routes, Route, Link} from 'react-router-dom';
 import Main from './views/Main';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
