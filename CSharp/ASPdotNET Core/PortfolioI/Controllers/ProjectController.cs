@@ -3,22 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 namespace PortfolioI.Controllers;
 public class ProjectController : Controller
 {      
-    [HttpGet] 
-    [Route("")]
-    public string Index()
+    [HttpGet("")] 
+    public ViewResult Index()
     {
-        return "This is my Index!";
+        return View();
     }
 
     [HttpGet("projects")]
-    public string Projects()
+    public ViewResult Projects()
     {
-        return "These are my projects!";
+        return View();
     }
 
     [HttpGet("contact")]
-    public string Contact()
+    public ViewResult Contact()
     {
-        return "This is my contact info!";
+        return View();
     }
 }

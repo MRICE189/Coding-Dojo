@@ -19,3 +19,5 @@ C:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ASPdotNET Core\PortfolioI\obj\
 C:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ASPdotNET Core\PortfolioI\obj\Debug\net6.0\PortfolioI.pdb
 C:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ASPdotNET Core\PortfolioI\obj\Debug\net6.0\PortfolioI.genruntimeconfig.cache
 C:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ASPdotNET Core\PortfolioI\obj\Debug\net6.0\ref\PortfolioI.dll
+C:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ASPdotNET Core\PortfolioI\obj\Debug\net6.0\PortfolioI.RazorAssemblyInfo.cache
+C:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ASPdotNET Core\PortfolioI\obj\Debug\net6.0\PortfolioI.RazorAssemblyInfo.cs
