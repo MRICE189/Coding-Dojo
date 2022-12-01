@@ -12,5 +12,5 @@ public class User
     [Required]
     public string Language {get;set;}
     [MinLength(21)]
-    public string Comment {get;set;}
+    public string? Comment {get;set;}
 }
