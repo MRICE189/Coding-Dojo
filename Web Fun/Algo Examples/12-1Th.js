@@ -85,11 +85,6 @@ class SinglyLinkedList {
         let runner = this.head;
         while (runner.next) {
             if (runner.next.data === val) {
-                //if it's the last node
-                if (runner.next.next === null) {
-                    runner.next = null;
-                    return true;
-                }
                 runner.next = runner.next.next;
                 return true;
             }
@@ -418,8 +413,8 @@ const unorderedList = new SinglyLinkedList().insertAtBackMany([
     -5, -10, 4, -3, 6, 1, -7, -2,
 ]);
 
-console.log(singleNodeList.prepend(6,1));
-console.log(singleNodeList.toArr());
+console.log(firstThreeList.removeVal(3));
+console.log(firstThreeList.toArr());
 
 /* node 4 connects to node 1, back to head */
 // const perfectLoopList = new SinglyLinkedList().insertAtBackMany([1, 2, 3, 4]);
