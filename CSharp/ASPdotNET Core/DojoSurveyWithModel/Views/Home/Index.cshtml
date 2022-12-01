@@ -4,12 +4,14 @@
 @model User
 <h1>Dojo Survey</h1>
 
-<form action="/submit" method="post">
+<form asp-action="Submit" asp-controller="Home" method="post">
     <div>
+        <span asp-validation-for="Name"></span>
         <label asp-for="Name"></label>
         <input asp-for="Name">
     </div>
     <div>
+        <span asp-validation-for="Location"></span>
         <label asp-for="Location"></label>
         <select asp-for="Location">
             <option value="San Jose">San Jose</option>
@@ -17,6 +19,7 @@
         </select>
     </div>
     <div>
+        <span asp-validation-for="Language"></span>
         <label asp-for="Language"></label>
         <select asp-for="Language">
             <option value="C#">C#</option>
@@ -25,6 +28,7 @@
         </select>
     </div>
     <div>
+        <span asp-validation-for="Comment"></span>
         <label asp-for="Comment"></label>
         <textarea asp-for="Comment"></textarea>
     </div>

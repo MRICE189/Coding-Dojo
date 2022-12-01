@@ -1,9 +1,16 @@
+#pragma warning disable CS8618
+using System.ComponentModel.DataAnnotations;
 namespace DojoSurveyWithModel.Models;
 
 public class User
 {
-    public string? Name {set;get;}
-    public string? Location {set;get;}
-    public string? Language {set;get;}
-    public string? Comment {set;get;}
+    [Required]
+    [MinLength(2)]
+    public string Name {get;set;}
+    [Required]
+    public string Location {get;set;}
+    [Required]
+    public string Language {get;set;}
+    [MinLength(21)]
+    public string Comment {get;set;}
 }

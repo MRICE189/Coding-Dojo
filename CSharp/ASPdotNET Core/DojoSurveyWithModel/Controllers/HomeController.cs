@@ -15,11 +15,20 @@ public class HomeController : Controller
     [HttpPost("submit")]
     public IActionResult Submit(User userInstance)
     {
-        if (userInstance.Comment == null) 
+        if (ModelState.IsValid)
         {
-            userInstance.Comment = "No Comment";
+            System.Console.WriteLine("valid");
+            if (userInstance.Comment == null) 
+            {
+                userInstance.Comment = "No Comment";
+            }
+            return View("Results", userInstance);
         }
-        return View("Results", userInstance);
+        else 
+        {
+            System.Console.WriteLine("was not valid");
+            return View("Index");
+        }
     }
 }
 
