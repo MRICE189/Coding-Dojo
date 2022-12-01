@@ -1,0 +1,10 @@
+@model List<User>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@foreach (User person in Model)
+{
+    <p>@person.FirstName @person.LastName</p>
+}
