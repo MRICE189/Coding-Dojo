@@ -53,6 +53,7 @@ class SinglyLinkedList {
         //if list is empty
         if (this.isEmpty()) {
             this.head = addList.head;
+            return this;
         }
         let runner = this.head;
         // loop through to the end of the first list until
