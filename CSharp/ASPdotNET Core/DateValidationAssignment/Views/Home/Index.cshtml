@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Home
+<form asp-action="Submit" method="post">
+    <label asp-for="GivenDate"></label>
+    <span asp-validation-for="GivenDate"></span>
+    <input asp-for="GivenDate">
+    <input type="submit" value="Submit">
+</form>
