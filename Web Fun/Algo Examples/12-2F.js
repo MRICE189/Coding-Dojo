@@ -89,7 +89,7 @@ class SinglyLinkedList {
         runner = this.head;
         while (runner.next.next) {
             if (runner.next.data === min) {
-                const connectNode = runner.next.next
+                const connectNode = runner.next.next;
                 const oldHead = this.head;
                 const newHead = runner.next;
                 runner.next = connectNode;
