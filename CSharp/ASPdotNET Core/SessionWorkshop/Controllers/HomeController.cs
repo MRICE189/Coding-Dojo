@@ -42,6 +42,9 @@ public class HomeController : Controller
     public IActionResult PlusOne()
     {
         int? count = HttpContext.Session.GetInt32("Count");
+        if (count == null) {
+            count = 0;
+        }
         count += 1;
         HttpContext.Session.SetInt32("Count", (int)count);
         return RedirectToAction("Buttons");
@@ -50,6 +53,9 @@ public class HomeController : Controller
     public IActionResult MinusOne()
     {
         int? count = HttpContext.Session.GetInt32("Count");
+        if (count == null) {
+            count = 0;
+        }
         count -= 1;
         HttpContext.Session.SetInt32("Count", (int)count);
         return RedirectToAction("Buttons");
@@ -58,6 +64,9 @@ public class HomeController : Controller
     public IActionResult TimesTwo()
     {
         int? count = HttpContext.Session.GetInt32("Count");
+        if (count == null) {
+            count = 0;
+        }
         count *= 2;
         HttpContext.Session.SetInt32("Count", (int)count);
         return RedirectToAction("Buttons");
@@ -67,6 +76,9 @@ public class HomeController : Controller
     {
         Random rand = new Random();
         int? count = HttpContext.Session.GetInt32("Count");
+        if (count == null) {
+            count = 0;
+        }
         count = count + rand.Next(1,11);
         HttpContext.Session.SetInt32("Count", (int)count);
         return RedirectToAction("Buttons");
