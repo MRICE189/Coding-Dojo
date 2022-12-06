@@ -59,6 +59,12 @@ System.Console.WriteLine(lNames.Count());
 int? highestElevation = eruptions.Max(e => e.ElevationInMeters);
 System.Console.WriteLine(highestElevation);
 
+IEnumerable<string> highestName = eruptions.Where(e => e.ElevationInMeters == highestElevation).Select(v => v.Volcano);
+foreach (string v in highestName)
+{
+    System.Console.WriteLine(v);
+}
+
 // all volcano names alphabetically
 IEnumerable<string> namesAlpha = eruptions.OrderBy(v => v.Volcano).Select(e => e.Volcano);
 foreach (string v in namesAlpha)
