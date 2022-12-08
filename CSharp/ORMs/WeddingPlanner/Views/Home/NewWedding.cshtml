@@ -17,22 +17,22 @@
 <div class="col-6">
 
 <form asp-action="CreateWedding" asp-controller="Home" method="post">
-    <span asp-validation-for="WedderOne"></span>
+    <span asp-validation-for="WedderOne" class="text-danger"></span>
     <div class="mb-3 gap-3 d-flex justify-content-between">
         <label asp-for="WedderOne"></label>
         <input asp-for="WedderOne" class="form-control"/>
     </div>
-    <span asp-validation-for="WedderTwo"></span>
+    <span asp-validation-for="WedderTwo" class="text-danger"></span>
     <div class="mb-3 gap-3 d-flex justify-content-between">
         <label asp-for="WedderTwo"></label>
         <input asp-for="WedderTwo" class="form-control"/>
     </div>
-    <span asp-validation-for="DateOfWedding"></span>
+    <span asp-validation-for="DateOfWedding" class="text-danger"></span>
     <div class="mb-3 gap-3 d-flex justify-content-between">
         <label asp-for="DateOfWedding"></label>
         <input asp-for="DateOfWedding" class="form-control"/>
     </div>
-    <span asp-validation-for="Address"></span>
+    <span asp-validation-for="Address" class="text-danger"></span>
     <div class="mb-3 gap-3 d-flex justify-content-between">
         <label asp-for="Address"></label>
         <input asp-for="Address" class="form-control"/>

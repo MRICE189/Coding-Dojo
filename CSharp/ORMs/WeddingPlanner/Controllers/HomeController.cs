@@ -69,7 +69,7 @@ public class HomeController : Controller
             var result = hasher.VerifyHashedPassword(loginUser, userInDb.Password, loginUser.LoginPassword);
             if (result == 0)
             {
-                ModelState.AddModelError("LogingEmail", "Invalid credentials.");
+                ModelState.AddModelError("LoginEmail", "Invalid credentials.");
                 return View("Index");
             }
             //login success
