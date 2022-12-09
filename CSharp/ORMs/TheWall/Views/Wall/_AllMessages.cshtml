@@ -1,0 +1,25 @@
+@model MyViewModel
+
+@foreach (Message message in Model.AllMessages)
+{
+    if (message != null)
+    {
+    <div class="border border-3 p-3 mb-1">
+    <p><strong>@message.User.FirstName @message.User.LastName[0] - @message.CreatedAt.ToString("MMM dd, yyyy")</strong></p>
+    <p>@message.MessageText</p>
+    </div>
+    <div>
+        @foreach (Comment comm in message.MessageComments)
+        {
+            <p>@comm.CommentText</p>
+        }
+    </div>
+    {
+        Comment comment = new Comment()
+        {
+            MessageId = message.MessageId
+        };
+    @await Html.PartialAsync("_PostComment", comment)
+    }
+    }
+}

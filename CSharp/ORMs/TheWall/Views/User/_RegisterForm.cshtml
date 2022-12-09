@@ -1,0 +1,30 @@
+@model User
+
+<form asp-action="CreateUser" asp-controller="User" method="post">
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between gap-3">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control"/>
+    </div>
+    <span asp-validation-for="LastName" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between gap-3">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control"/>
+    </div>
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between gap-3">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control"/>
+    </div>
+    <span asp-validation-for="Password" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between gap-3">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control"/>
+    </div>
+    <span asp-validation-for="ConfirmPw" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between gap-3">
+        <label asp-for="ConfirmPw">Confirm Password</label>
+        <input asp-for="ConfirmPw" class="form-control"/>
+    </div>
+    <input type="submit" value="Register" class="btn btn-primary"/>
+</form>

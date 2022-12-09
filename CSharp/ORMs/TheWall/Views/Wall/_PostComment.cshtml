@@ -1,0 +1,13 @@
+@model Comment
+
+<form asp-action="CreateComment" asp-controller="Wall" method="post">
+    <input asp-for="MessageId" type="hidden" value="@Model.MessageId"/>
+    <div>
+        <label asp-for="CommentText">Post a Comment:</label>
+        <textarea asp-for="CommentText" class="form-control" rows="2"></textarea>
+    </div>
+    <span asp-validation-for="CommentText" class="text-danger"></span>
+    <div class="text-end">
+        <input type="submit" value="Comment" class="btn btn-primary my-3">
+    </div>
+</form>

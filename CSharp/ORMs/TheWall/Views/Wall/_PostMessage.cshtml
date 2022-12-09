@@ -1,0 +1,12 @@
+@model Message
+
+<form asp-action="CreateMessage" asp-controller="Wall" method="post">
+    <div>
+        <label asp-for="MessageText">Post a Message:</label>
+        <textarea asp-for="MessageText" class="form-control" rows="3"></textarea>
+    </div>
+    <span asp-validation-for="MessageText" class="text-danger"></span>
+    <div>
+        <input type="submit" value="Post" class="btn btn-success mt-3">
+    </div>
+</form>
