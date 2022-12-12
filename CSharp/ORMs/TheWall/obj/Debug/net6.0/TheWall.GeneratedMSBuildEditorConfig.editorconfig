@@ -8,61 +8,61 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TheWall
 build_property.RootNamespace = TheWall
-build_property.ProjectDir = C:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ORMs\TheWall\
+build_property.ProjectDir = c:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ORMs\TheWall\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ORMs\TheWall
+build_property.MSBuildProjectDirectory = c:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ORMs\TheWall
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Home/Privacy.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Shared/Error.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/User/Index.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/User/_LoginUserForm.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/User/_LoginUserForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfTG9naW5Vc2VyRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/User/_RegisterForm.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/User/_RegisterForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxfUmVnaXN0ZXJGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Wall/WallView.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Wall/WallView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2FsbFxXYWxsVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Wall/_AllMessages.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Wall/_AllMessages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2FsbFxfQWxsTWVzc2FnZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Wall/_PostComment.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Wall/_PostComment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2FsbFxfUG9zdENvbW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Wall/_PostMessage.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Wall/_PostMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2FsbFxfUG9zdE1lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/_ViewImports.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/_ViewStart.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Shared/_Layout.cshtml]
+[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ORMs/TheWall/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bw2f65wfp8
