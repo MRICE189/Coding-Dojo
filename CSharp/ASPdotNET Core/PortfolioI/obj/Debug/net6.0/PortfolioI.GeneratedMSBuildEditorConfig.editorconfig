@@ -8,21 +8,21 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PortfolioI
 build_property.RootNamespace = PortfolioI
-build_property.ProjectDir = c:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ASPdotNET Core\PortfolioI\
+build_property.ProjectDir = c:\Users\mattr\OneDrive\Desktop\Coding-Dojo\CSharp\ASPdotNET Core\PortfolioI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\Matt\OneDrive\Desktop\Coding Dojo\CSharp\ASPdotNET Core\PortfolioI
+build_property.MSBuildProjectDirectory = c:\Users\mattr\OneDrive\Desktop\Coding-Dojo\CSharp\ASPdotNET Core\PortfolioI
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ASPdotNET Core/PortfolioI/Views/Project/Contact.cshtml]
+[c:/Users/mattr/OneDrive/Desktop/Coding-Dojo/CSharp/ASPdotNET Core/PortfolioI/Views/Project/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ASPdotNET Core/PortfolioI/Views/Project/Index.cshtml]
+[c:/Users/mattr/OneDrive/Desktop/Coding-Dojo/CSharp/ASPdotNET Core/PortfolioI/Views/Project/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Matt/OneDrive/Desktop/Coding Dojo/CSharp/ASPdotNET Core/PortfolioI/Views/Project/Projects.cshtml]
+[c:/Users/mattr/OneDrive/Desktop/Coding-Dojo/CSharp/ASPdotNET Core/PortfolioI/Views/Project/Projects.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxQcm9qZWN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
